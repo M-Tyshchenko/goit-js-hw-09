@@ -48,7 +48,7 @@ startBtn.addEventListener('click', () => {
     
     updateInterfaceTimer(time);
     
-    if (secondsTimer.textContent === `00`) {
+    if (daysTimer.textContent === '00' && hoursTimer.textContent === '00' && minutesTimer.textContent === '00' && secondsTimer.textContent === '00') {
       clearInterval(timerId);
       dateInput.removeAttribute("disabled");
     }
