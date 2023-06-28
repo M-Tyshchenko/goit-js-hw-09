@@ -14,17 +14,14 @@ formData();
 formEl.addEventListener('submit', onSubmitBtnClick);
 
 function onSubmitBtnClick(event) {
-  event.preventDefault(); // щоб при сабміті сторінка не перезавантажувалась
-  
-  setTimeout(() => {
-    let delay = firstDelay;
-    for (let position = 1; position <= amount; position += 1) {
-      createPromise(position, delay);
-      delay += delayStep;
-    }
-  }, firstDelay);
-}
+  event.preventDefault(); 
 
+  let delay = firstDelay;
+  for (let position = 1; position <= amount; position += 1) {
+    createPromise(position, delay);
+    delay += delayStep;
+  }  
+}
 //-------------------------------------------------------------
 
 // відслідковую введені дані в поля форми----------------------
